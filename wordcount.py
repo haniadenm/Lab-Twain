@@ -1,8 +1,11 @@
 # put your code here.
-import fileinput
-for line in fileinput.input():
-    process(line)
-    
+import sys
+
+# import fileinput
+# for line in fileinput.input():
+#     process(line)
+print("Filename = ", sys.argv[1])
+
 
 def word_count(file):
     input_file = open(file)
@@ -37,10 +40,22 @@ def word_count_strip_punctuation(file):
 
 
 print("***************")
-word_count[argv[1]]
+word_count(sys.argv[1])
 print("***************")
-# word_count_strip_punctuation("test.txt")
-# print("***************")
-# word_count("twain.txt")
-# print("***************")
-# word_count_strip_punctuation("twain.txt")
+word_count_strip_punctuation(sys.argv[1])
+
+
+def count_using_collections(file):
+    input_file = open(file)
+    count_collections = {}
+    # Need to change the code below to read in the file in one string,
+    # and then split, then use a collections object and the method .count()
+    # passing it the  word_count dictionary.
+
+    # for line in input_file:
+    #     words = line.split()
+    #     for word in words:
+    #         word = word.lower()
+    #         word = word.strip()
+    #         word = word.strip(',.?')
+    #         count_collection[word] =
